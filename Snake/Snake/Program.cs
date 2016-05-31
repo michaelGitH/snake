@@ -10,60 +10,70 @@ namespace Snake
     {
         static void Main(string[] args)
         {
-            /*Point p1 = new Point(1, 3, '*');
+            Point p1 = new Point(1, 3, '*');
             p1.Draw();
 
             Point p2 = new Point(4, 5, '#');
             p2.Draw();
 
-            */
+            Point p3 = new Point(8, 8, '$');
+            p3.Draw();
 
-            int x = 1;
-            Funk1(x);
-            Console.WriteLine("Call Funk1. x = " + x);
+            Point p4 = new Point(8, 15, '$');
+            p4.Draw();
 
-            x = 1;
-            Funk2(x);
-            Console.WriteLine("Call Funk2. x = " + x);
+            Point p5 = new Point(20, 15, '$');
+            p5.Draw();
 
-            x = 1;
-            Funk1(x);
-            Console.WriteLine("Call Funk3. x = " + x);
+            Point p6 = new Point(20, 8, '$');
+            p6.Draw();
 
-            Point p1 = new Point(1, 3, '*');
-            Move(p1, 10, 10);
-            Console.WriteLine("Call Move. p1.x = " + p1.x + ", p1.y = " + p1.y);
+            List < int > numList = new List<int>();
+            numList.Add(0);
+            numList.Add(1);
+            numList.Add(2);
 
-            Point p2 = new Point(4, 5, '#');
-            p1 = p2;
-            p2.x = 8;
-            p2.y = 8;
-            Console.WriteLine("p1 = p2. p1.x = " + p1.x + ", p1.y = " + p1.y + "; p2.x = " + p2.x + ", p2.y = " + p2.y);
+            int x = numList[ 0 ];
+            int y = numList[ 1 ];
+            int z = numList[ 2 ];
 
-            p1 = new Point(1, 3, '*');
-            Update(p1);
-            Console.WriteLine("Call Move. p1.x = " + p1.x + ", p1.y = " + p1.y);
+            foreach( int i in numList )
+            {
+                Console.WriteLine(i);
+            }
+
+            numList.RemoveAt(0);
+
+            List<Point> plist = new List<Point>();
+            plist.Add(p1);
+            plist.Add(p2);
+
+            List<char> symb = new List<char>();
+            symb.Add('!');
+            symb.Add('@');
+            symb.Add('#');
+            symb.Add('$');
+            symb.Add('*');
+
+            foreach(char i in symb)
+            {
+                Console.WriteLine(i);
+            }
+
+            List<Point> rec = new List<Point>();
+            rec.Add(p3);
+            rec.Add(p4);
+            rec.Add(p5);
+            rec.Add(p6);
+
+
+            for ( int i = 0; i < 4; i++ )
+            {
+                Console.WriteLine(rec[ i ]);
+            }
+
 
             Console.ReadLine();
-        }
-        public static void Funk1( int value )
-        {
-        }
-        public static void Funk2(int value)
-        {
-        }
-        public static void Funk3(int value)
-        {
-        }
-
-        public static void Move(Point p, int dx, int dy )
-        {
-            p.x += dx;
-            p.y += dy;
-        }
-        public static void Update( Point p )
-        {
-            p = new Point();
         }
     }
 }
