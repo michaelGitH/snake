@@ -12,7 +12,9 @@ namespace Snake
         {
             for ( int i = 0; i < length; i++ )
             {
-
+                Point p = new Point(tail);
+                p.Move(i, direction);
+                pList.Add(p);
             }
         }
     }
