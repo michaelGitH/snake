@@ -11,6 +11,26 @@ namespace Snake
     {
         static void Main(string[] args)
         {
+            VerticalLine v1 = new VerticalLine(0, 10, 5, '%');
+            v1.Drow();
+
+            Point p1 = new Point(4, 5, '*');
+            Figure fSnake = new Snake(p1, 4, Direction.RIGHT);
+            Drow(fSnake);
+            Snake snake1 = (Snake) fSnake;
+
+            HorizontalLine h1 = new HorizontalLine(0, 5, 6, '&');
+
+            List<Figure> figures = new List<Figure>();
+            figures.Add(fSnake);
+            figures.Add(v1);
+            figures.Add(h1);
+
+            foreach( var f in figures )
+            {
+                f.Drow();
+            }
+
             Console.SetBufferSize(80, 25);
 
             HorizontalLine upLine = new HorizontalLine(0, 78, 0, '+');
@@ -50,6 +70,10 @@ namespace Snake
 
             Console.ReadLine();
             
+        }
+        static void Drow(Figure figure)
+        {
+            figure.Drow();
         }
     }
 }
